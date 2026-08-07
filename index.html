@@ -1,190 +1,254 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chyże 3 – Wybór wersji strony</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Outfit', system-ui, sans-serif;
-      background: #F4F1EA;
-      color: #2C2F29;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-    header p {
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #C48B61;
-      margin-bottom: 0.75rem;
-    }
-    header h1 {
-      font-size: clamp(1.8rem, 5vw, 3rem);
-      font-weight: 300;
-      letter-spacing: -0.02em;
-      line-height: 1.15;
-    }
-    header span {
-      display: block;
-      font-size: 1rem;
-      font-weight: 400;
-      color: #5A5E56;
-      margin-top: 0.5rem;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      max-width: 900px;
-      width: 100%;
-    }
-    .card {
-      background: #fff;
-      border-radius: 16px;
-      overflow: hidden;
-      text-decoration: none;
-      color: inherit;
-      box-shadow: 0 2px 8px rgba(44,47,41,0.08);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-      display: flex;
-      flex-direction: column;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 36px rgba(44,47,41,0.14);
-    }
-    .card__preview {
-      height: 140px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.5rem;
-    }
-    .card--v1 .card__preview { background: linear-gradient(135deg, #2C2F29 0%, #5A5E56 100%); }
-    .card--v2 .card__preview { background: linear-gradient(135deg, #0C1410 0%, #1C2B1E 100%); }
-    .card--v3 .card__preview { background: linear-gradient(135deg, #F4F2EE 0%, #EAE7E0 100%); }
-    .card__body {
-      padding: 1.25rem 1.5rem 1.5rem;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-    .card__label {
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      margin-bottom: 0.35rem;
-    }
-    .card--v1 .card__label { color: #C48B61; }
-    .card--v2 .card__label { color: #C59135; }
-    .card--v3 .card__label { color: #B84832; }
-    .card__title {
-      font-size: 1.1rem;
-      font-weight: 500;
-      margin-bottom: 0.4rem;
-    }
-    .card__desc {
-      font-size: 0.82rem;
-      color: #5A5E56;
-      line-height: 1.55;
-      flex: 1;
-    }
-    .card__cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      margin-top: 1rem;
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #2C2F29;
-    }
-    .card__cta svg { transition: transform 0.2s; }
-    .card:hover .card__cta svg { transform: translateX(4px); }
-    footer {
-      margin-top: 3rem;
-      font-size: 0.75rem;
-      color: #A8ACA4;
-    }
-    @media (max-width: 680px) {
-      .grid { grid-template-columns: 1fr; }
-    }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chyże 3 – Wybór wersji strony</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Outfit", system-ui, sans-serif;
+        background: #f4f1ea;
+        color: #2c2f29;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+      header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+      header p {
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #c48b61;
+        margin-bottom: 0.75rem;
+      }
+      header h1 {
+        font-size: clamp(1.8rem, 5vw, 3rem);
+        font-weight: 300;
+        letter-spacing: -0.02em;
+        line-height: 1.15;
+      }
+      header span {
+        display: block;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #5a5e56;
+        margin-top: 0.5rem;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        max-width: 900px;
+        width: 100%;
+      }
+      .card {
+        background: #fff;
+        border-radius: 16px;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+        box-shadow: 0 2px 8px rgba(44, 47, 41, 0.08);
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+        display: flex;
+        flex-direction: column;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 36px rgba(44, 47, 41, 0.14);
+      }
+      .card__preview {
+        height: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+      }
+      .card--v1 .card__preview {
+        background: linear-gradient(135deg, #2c2f29 0%, #5a5e56 100%);
+      }
+      .card--v2 .card__preview {
+        background: linear-gradient(135deg, #0c1410 0%, #1c2b1e 100%);
+      }
+      .card--v3 .card__preview {
+        background: linear-gradient(135deg, #f4f2ee 0%, #eae7e0 100%);
+      }
+      .card__body {
+        padding: 1.25rem 1.5rem 1.5rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .card__label {
+        font-size: 0.65rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        margin-bottom: 0.35rem;
+      }
+      .card--v1 .card__label {
+        color: #c48b61;
+      }
+      .card--v2 .card__label {
+        color: #c59135;
+      }
+      .card--v3 .card__label {
+        color: #b84832;
+      }
+      .card__title {
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-bottom: 0.4rem;
+      }
+      .card__desc {
+        font-size: 0.82rem;
+        color: #5a5e56;
+        line-height: 1.55;
+        flex: 1;
+      }
+      .card__cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-top: 1rem;
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #2c2f29;
+      }
+      .card__cta svg {
+        transition: transform 0.2s;
+      }
+      .card:hover .card__cta svg {
+        transform: translateX(4px);
+      }
+      footer {
+        margin-top: 3rem;
+        font-size: 0.75rem;
+        color: #a8aca4;
+      }
+      @media (max-width: 680px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <p>Chyże 3 · Wysowa-Zdrój</p>
+      <h1>Wybierz wersję strony</h1>
+      <span>Kliknij wersję, aby zobaczyć podgląd</span>
+    </header>
 
-  <header>
-    <p>Chyże 3 · Wysowa-Zdrój</p>
-    <h1>Wybierz wersję strony</h1>
-    <span>Kliknij wersję, aby zobaczyć podgląd</span>
-  </header>
+    <div class="grid">
+      <a href="version1/index.html" class="card card--v1">
+        <div class="card__preview">🌿</div>
+        <div class="card__body">
+          <span class="card__label">Wersja 1</span>
+          <div class="card__title">Elegancka klasyczna</div>
+          <p class="card__desc">
+            Ciepłe beże, terakota i szałwiowa zieleń. Cormorant Garamond +
+            Outfit. Hero wyśrodkowany.
+          </p>
+          <span class="card__cta">
+            Otwórz
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </span>
+        </div>
+      </a>
 
-  <div class="grid">
+      <a href="version2/index.html" class="card card--v2">
+        <div class="card__preview">🌑</div>
+        <div class="card__body">
+          <span class="card__label">Wersja 2</span>
+          <div class="card__title">Ciemna, dramatyczna</div>
+          <p class="card__desc">
+            Ciemny las, bursztynowe złoto. Playfair Display italic + DM Sans.
+            Hero do lewej, lista numerowana.
+          </p>
+          <span class="card__cta">
+            Otwórz
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </span>
+        </div>
+      </a>
 
-    <a href="version1/index.html" class="card card--v1">
-      <div class="card__preview">🌿</div>
-      <div class="card__body">
-        <span class="card__label">Wersja 1</span>
-        <div class="card__title">Elegancka klasyczna</div>
-        <p class="card__desc">Ciepłe beże, terakota i szałwiowa zieleń. Cormorant Garamond + Outfit. Hero wyśrodkowany.</p>
-        <span class="card__cta">
-          Otwórz
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-          </svg>
-        </span>
-      </div>
-    </a>
+      <a href="version3/index.html" class="card card--v3">
+        <div class="card__preview">☀️</div>
+        <div class="card__body">
+          <span class="card__label">Wersja 3</span>
+          <div class="card__title">Jasna, skandynawska</div>
+          <p class="card__desc">
+            Biała i kremowa, ceglany akcent. Space Grotesk + Inter. Kwadratowy
+            design, statystyki w hero.
+          </p>
+          <span class="card__cta">
+            Otwórz
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </span>
+        </div>
+      </a>
+    </div>
 
-    <a href="version2/index.html" class="card card--v2">
-      <div class="card__preview">🌑</div>
-      <div class="card__body">
-        <span class="card__label">Wersja 2</span>
-        <div class="card__title">Ciemna, dramatyczna</div>
-        <p class="card__desc">Ciemny las, bursztynowe złoto. Playfair Display italic + DM Sans. Hero do lewej, lista numerowana.</p>
-        <span class="card__cta">
-          Otwórz
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-          </svg>
-        </span>
-      </div>
-    </a>
-
-    <a href="version3/index.html" class="card card--v3">
-      <div class="card__preview">☀️</div>
-      <div class="card__body">
-        <span class="card__label">Wersja 3</span>
-        <div class="card__title">Jasna, skandynawska</div>
-        <p class="card__desc">Biała i kremowa, ceglany akcent. Space Grotesk + Inter. Kwadratowy design, statystyki w hero.</p>
-        <span class="card__cta">
-          Otwórz
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-          </svg>
-        </span>
-      </div>
-    </a>
-
-  </div>
-
-  <footer>© 2025 Chyże 3 · Wysowa-Zdrój, Beskid Niski</footer>
-
-</body>
+    <footer>© 2026 Chyże 3 · Wysowa-Zdrój, Beskid Niski</footer>
+  </body>
 </html>

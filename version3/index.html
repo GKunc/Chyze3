@@ -1,553 +1,830 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chyże 3 – Domki w Beskidzie Niskim | Wysowa-Zdrój</title>
-  <meta name="description" content="Trzy niezależne domki na wynajem w sercu Beskidu Niskiego. Sauna, balia, cisza i natura w Wysowej-Zdroju. Minimalna rezerwacja: 2 noce.">
-  <meta property="og:title" content="Chyże 3 – Domki w Beskidzie Niskim">
-  <meta property="og:description" content="Trzy domy, jedna natura. Wysowa-Zdrój, Beskid Niski.">
-  <meta property="og:url" content="https://www.domkichyze.pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chyże 3 – Domki w Beskidzie Niskim | Wysowa-Zdrój</title>
+    <meta
+      name="description"
+      content="Trzy niezależne domki na wynajem w sercu Beskidu Niskiego. Sauna, balia, cisza i natura w Wysowej-Zdroju. Minimalna rezerwacja: 2 noce."
+    />
+    <meta property="og:title" content="Chyże 3 – Domki w Beskidzie Niskim" />
+    <meta
+      property="og:description"
+      content="Trzy domy, jedna natura. Wysowa-Zdrój, Beskid Niski."
+    />
+    <meta property="og:url" content="https://www.domkichyze.pl" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link rel="stylesheet" href="design.css">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <!-- ════════════════════════════════════════
+    <link rel="stylesheet" href="design.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ════════════════════════════════════════
        NAWIGACJA
   ════════════════════════════════════════ -->
-  <header class="nav" id="nav">
-    <div class="nav__container">
+    <header class="nav" id="nav">
+      <div class="nav__container">
+        <a href="#top" class="nav__logo">
+          <img
+            src="logo.png"
+            alt="Chyże 3 logo"
+            class="nav__logo-img"
+            onerror="this.style.display = 'none'"
+          />
+          <span class="nav__logo-text">Chyże 3</span>
+        </a>
 
-      <a href="#top" class="nav__logo">
-        <img src="logo.png" alt="Chyże 3 logo" class="nav__logo-img" onerror="this.style.display='none'">
-        <span class="nav__logo-text">Chyże 3</span>
-      </a>
+        <nav class="nav__links" id="navLinks" aria-label="Nawigacja główna">
+          <a href="#domki">Nasze domki</a>
+          <a href="#atrakcje">Atrakcje</a>
+          <a href="#cennik">Cennik</a>
+          <a href="#o-nas">O nas</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
 
-      <nav class="nav__links" id="navLinks" aria-label="Nawigacja główna">
-        <a href="#domki">Nasze domki</a>
-        <a href="#atrakcje">Atrakcje</a>
-        <a href="#cennik">Cennik</a>
-        <a href="#o-nas">O nas</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
+        <a href="#kontakt" class="nav__cta">Zarezerwuj</a>
 
-      <a href="#kontakt" class="nav__cta">Zarezerwuj</a>
+        <button
+          class="nav__hamburger"
+          id="hamburger"
+          aria-label="Otwórz menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
 
-      <button class="nav__hamburger" id="hamburger" aria-label="Otwórz menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-
-    </div>
-  </header>
-
-
-  <!-- ════════════════════════════════════════
+    <!-- ════════════════════════════════════════
        HERO
   ════════════════════════════════════════ -->
-  <section class="hero" id="top" aria-label="Baner główny">
-    <div class="hero__bg" role="img" aria-label="Alpejski krajobraz o poranku"></div>
-    <div class="hero__content">
-      <div class="hero__badge">Wysowa-Zdrój · Beskid Niski</div>
-      <h1 class="hero__title">Trzy domy.<br>Jedna natura.</h1>
-      <p class="hero__subtitle">Kompleks trzech niezależnych domków na wynajem, osadzony w naturalnym otoczeniu Beskidu Niskiego. Spokój, wygoda i przestrzeń.</p>
-      <div class="hero__actions">
-        <a href="#kontakt" class="btn btn--accent btn--lg">Zarezerwuj pobyt</a>
-        <a href="#domki" class="btn btn--ghost btn--lg">Poznaj domki</a>
+    <section class="hero" id="top" aria-label="Baner główny">
+      <div
+        class="hero__bg"
+        role="img"
+        aria-label="Alpejski krajobraz o poranku"
+      ></div>
+      <div class="hero__content">
+        <div class="hero__badge">Wysowa-Zdrój · Beskid Niski</div>
+        <h1 class="hero__title">Trzy domy.<br />Jedna natura.</h1>
+        <p class="hero__subtitle">
+          Kompleks trzech niezależnych domków na wynajem, osadzony w naturalnym
+          otoczeniu Beskidu Niskiego. Spokój, wygoda i przestrzeń.
+        </p>
+        <div class="hero__actions">
+          <a href="#kontakt" class="btn btn--accent btn--lg"
+            >Zarezerwuj pobyt</a
+          >
+          <a href="#domki" class="btn btn--ghost btn--lg">Poznaj domki</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Statystyki w białym pasku na dole hero -->
-    <div class="hero__stats">
-      <div class="hero__stat">
-        <div class="hero__stat-num">3</div>
-        <div class="hero__stat-label">niezależne domki</div>
+      <!-- Statystyki w białym pasku na dole hero -->
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <div class="hero__stat-num">3</div>
+          <div class="hero__stat-label">niezależne domki</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-num">6</div>
+          <div class="hero__stat-label">osób każdy</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-num">2+</div>
+          <div class="hero__stat-label">noce minimum</div>
+        </div>
       </div>
-      <div class="hero__stat">
-        <div class="hero__stat-num">6</div>
-        <div class="hero__stat-label">osób każdy</div>
-      </div>
-      <div class="hero__stat">
-        <div class="hero__stat-num">2+</div>
-        <div class="hero__stat-label">noce minimum</div>
-      </div>
-    </div>
 
-    <a href="#domki" class="hero__scroll" aria-label="Przewiń w dół">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="12" y1="5" x2="12" y2="19"></line>
-        <polyline points="19 12 12 19 5 12"></polyline>
-      </svg>
-    </a>
-  </section>
+      <a href="#domki" class="hero__scroll" aria-label="Przewiń w dół">
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <polyline points="19 12 12 19 5 12"></polyline>
+        </svg>
+      </a>
+    </section>
 
-
-  <!-- ════════════════════════════════════════
+    <!-- ════════════════════════════════════════
        DOMKI / FEATURES
   ════════════════════════════════════════ -->
-  <section class="features" id="domki">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Chyże 3</span>
-        <h2>Komfort w sercu natury</h2>
-        <p>Trzy niezależne domy z pełnym wyposażeniem, gotowe przez cały rok. Prywatność gwarantowana.</p>
+    <section class="features" id="domki">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Chyże 3</span>
+          <h2>Komfort w sercu natury</h2>
+          <p>
+            Trzy niezależne domy z pełnym wyposażeniem, gotowe przez cały rok.
+            Prywatność gwarantowana.
+          </p>
+        </div>
+
+        <div class="features__grid">
+          <div class="feature-card animate animate--delay-1">
+            <div class="feature-card__icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+            </div>
+            <h3>3 domy</h3>
+            <p>
+              Każdy dom niezależny, do 6 osób. Nie dzielisz przestrzeni z
+              innymi.
+            </p>
+          </div>
+
+          <div class="feature-card animate animate--delay-2">
+            <div class="feature-card__icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" />
+              </svg>
+            </div>
+            <h3>Ruska balia</h3>
+            <p>
+              Opalana drewnem, ciepła woda pod rozgwieżdżonym beskidzkim niebem.
+            </p>
+          </div>
+
+          <div class="feature-card animate animate--delay-3">
+            <div class="feature-card__icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                />
+              </svg>
+            </div>
+            <h3>Ognisko</h3>
+            <p>
+              Wspólne miejsce przy ogniu — wieczory, cisza i gwiazdy nad
+              Beskidem.
+            </p>
+          </div>
+
+          <div class="feature-card animate animate--delay-1">
+            <div class="feature-card__icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="18.5" cy="17.5" r="3.5" />
+                <circle cx="5.5" cy="17.5" r="3.5" />
+                <circle cx="15" cy="5" r="1" />
+                <path d="M12 17.5V14l-3-3 4-3 2 3h2" />
+              </svg>
+            </div>
+            <h3>Trasy rowerowe</h3>
+            <p>
+              Beskid Niski to rowerowy raj — od spokojnych dolin po widokowe
+              grzbiety.
+            </p>
+          </div>
+
+          <div class="feature-card animate animate--delay-2">
+            <div class="feature-card__icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
+            </div>
+            <h3>Wi-Fi</h3>
+            <p>
+              Szybki internet — dla freelancerów i tych, którzy pracują z
+              widokiem na las.
+            </p>
+          </div>
+
+          <div class="feature-card animate animate--delay-3">
+            <div class="feature-card__icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="1" y="3" width="15" height="13" rx="1" />
+                <path d="M16 8h4l3 3v5h-7V8z" />
+                <circle cx="5.5" cy="18.5" r="2.5" />
+                <circle cx="18.5" cy="18.5" r="2.5" />
+              </svg>
+            </div>
+            <h3>Parking</h3>
+            <p>Wygodne, bezpieczne miejsce postojowe przy każdym domu.</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="features__grid">
-
-        <div class="feature-card animate animate--delay-1">
-          <div class="feature-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-              <polyline points="9 22 9 12 15 12 15 22"/>
-            </svg>
-          </div>
-          <h3>3 domy</h3>
-          <p>Każdy dom niezależny, do 6 osób. Nie dzielisz przestrzeni z innymi.</p>
-        </div>
-
-        <div class="feature-card animate animate--delay-2">
-          <div class="feature-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M12 6v6l4 2"/>
-            </svg>
-          </div>
-          <h3>Ruska balia</h3>
-          <p>Opalana drewnem, ciepła woda pod rozgwieżdżonym beskidzkim niebem.</p>
-        </div>
-
-        <div class="feature-card animate animate--delay-3">
-          <div class="feature-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-            </svg>
-          </div>
-          <h3>Ognisko</h3>
-          <p>Wspólne miejsce przy ogniu — wieczory, cisza i gwiazdy nad Beskidem.</p>
-        </div>
-
-        <div class="feature-card animate animate--delay-1">
-          <div class="feature-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="18.5" cy="17.5" r="3.5"/>
-              <circle cx="5.5" cy="17.5" r="3.5"/>
-              <circle cx="15" cy="5" r="1"/>
-              <path d="M12 17.5V14l-3-3 4-3 2 3h2"/>
-            </svg>
-          </div>
-          <h3>Trasy rowerowe</h3>
-          <p>Beskid Niski to rowerowy raj — od spokojnych dolin po widokowe grzbiety.</p>
-        </div>
-
-        <div class="feature-card animate animate--delay-2">
-          <div class="feature-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-              <line x1="8" y1="21" x2="16" y2="21"/>
-              <line x1="12" y1="17" x2="12" y2="21"/>
-            </svg>
-          </div>
-          <h3>Wi-Fi</h3>
-          <p>Szybki internet — dla freelancerów i tych, którzy pracują z widokiem na las.</p>
-        </div>
-
-        <div class="feature-card animate animate--delay-3">
-          <div class="feature-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="1" y="3" width="15" height="13" rx="1"/>
-              <path d="M16 8h4l3 3v5h-7V8z"/>
-              <circle cx="5.5" cy="18.5" r="2.5"/>
-              <circle cx="18.5" cy="18.5" r="2.5"/>
-            </svg>
-          </div>
-          <h3>Parking</h3>
-          <p>Wygodne, bezpieczne miejsce postojowe przy każdym domu.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ════════════════════════════════════════
+    <!-- ════════════════════════════════════════
        ATRAKCJE OKOLICY
   ════════════════════════════════════════ -->
-  <section class="extras" id="atrakcje">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Okolica</span>
-        <h2>Czego nie zabraknie</h2>
-        <p>Wysowa-Zdrój otwiera drzwi do spokojnych gór, koni, kajaków i słowackich dróg.</p>
+    <section class="extras" id="atrakcje">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Okolica</span>
+          <h2>Czego nie zabraknie</h2>
+          <p>
+            Wysowa-Zdrój otwiera drzwi do spokojnych gór, koni, kajaków i
+            słowackich dróg.
+          </p>
+        </div>
+
+        <div class="extras__grid">
+          <div class="extra-card animate">
+            <div class="extra-card__icon">🌿</div>
+            <h3>Park Zdrojowy i pijalnia wód</h3>
+            <p>
+              Zielone serce Wysowej — alejki, cisza i lokalne wody mineralne, z
+              których słynie uzdrowisko. Przestrzeń, do której wraca się
+              niepostrzeżenie.
+            </p>
+          </div>
+          <div class="extra-card animate animate--delay-1">
+            <div class="extra-card__icon">🐴</div>
+            <h3>Stadnina koni huculskich</h3>
+            <p>
+              W Regietowie — jedna z największych w Europie. Przejażdżka w
+              beskidzkiej scenerii to przeżycie dla całej rodziny.
+            </p>
+          </div>
+          <div class="extra-card animate animate--delay-2">
+            <div class="extra-card__icon">⛰️</div>
+            <h3>Górskie spacery</h3>
+            <p>
+              Beskid Niski to góry inne niż wszystkie — łagodne, przestrzenne i
+              spokojne. Szlaki bez tłumów i pośpiechu.
+            </p>
+          </div>
+          <div class="extra-card animate animate--delay-3">
+            <div class="extra-card__icon">🇸🇰</div>
+            <h3>Wycieczki na Słowację</h3>
+            <p>
+              Granica blisko — nowe trasy, spokojne miejscowości i inne
+              spojrzenie na góry. Doskonałe urozmaicenie pobytu.
+            </p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="extras__grid">
-        <div class="extra-card animate">
-          <div class="extra-card__icon">🌿</div>
-          <h3>Park Zdrojowy i pijalnia wód</h3>
-          <p>Zielone serce Wysowej — alejki, cisza i lokalne wody mineralne, z których słynie uzdrowisko. Przestrzeń, do której wraca się niepostrzeżenie.</p>
-        </div>
-        <div class="extra-card animate animate--delay-1">
-          <div class="extra-card__icon">🐴</div>
-          <h3>Stadnina koni huculskich</h3>
-          <p>W Regietowie — jedna z największych w Europie. Przejażdżka w beskidzkiej scenerii to przeżycie dla całej rodziny.</p>
-        </div>
-        <div class="extra-card animate animate--delay-2">
-          <div class="extra-card__icon">⛰️</div>
-          <h3>Górskie spacery</h3>
-          <p>Beskid Niski to góry inne niż wszystkie — łagodne, przestrzenne i spokojne. Szlaki bez tłumów i pośpiechu.</p>
-        </div>
-        <div class="extra-card animate animate--delay-3">
-          <div class="extra-card__icon">🇸🇰</div>
-          <h3>Wycieczki na Słowację</h3>
-          <p>Granica blisko — nowe trasy, spokojne miejscowości i inne spojrzenie na góry. Doskonałe urozmaicenie pobytu.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ════════════════════════════════════════
+    <!-- ════════════════════════════════════════
        O NAS
   ════════════════════════════════════════ -->
-  <section class="about" id="o-nas">
-    <div class="container about__inner">
+    <section class="about" id="o-nas">
+      <div class="container about__inner">
+        <div class="about__image-wrap animate">
+          <div class="about__image-placeholder">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+            >
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+            <span>Zdjęcia wkrótce</span>
+          </div>
+        </div>
 
-      <div class="about__image-wrap animate">
-        <div class="about__image-placeholder">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-            <polyline points="9 22 9 12 15 12 15 22"/>
-          </svg>
-          <span>Zdjęcia wkrótce</span>
+        <div class="about__content animate animate--delay-2">
+          <span class="section-label">Nasza historia</span>
+          <h2>Od miejsca wszystko się zaczęło</h2>
+          <p>
+            Ta historia zaczęła się dużo wcześniej, zanim powstały domy. Około
+            30 lat temu nasi rodzice trafili do Wysowej-Zdroju, szukając miejsca
+            na spokojny odpoczynek. Wystarczyło kilka wizyt, żeby zakochać się w
+            tej okolicy — w ciszy, przestrzeni i beskidzkim krajobrazie.
+          </p>
+          <p>
+            Po latach wróciliśmy tu w trójkę — jako rodzeństwo — z pomysłem,
+            żeby stworzyć coś własnego. Projekt powstał w naszej rodzinie —
+            jeden z nas jest architektem. Prosto, wygodnie i z myślą o
+            prawdziwym odpoczynku.
+          </p>
+          <a href="#kontakt" class="btn btn--primary">Napisz do nas</a>
         </div>
       </div>
+    </section>
 
-      <div class="about__content animate animate--delay-2">
-        <span class="section-label">Nasza historia</span>
-        <h2>Od miejsca wszystko się zaczęło</h2>
-        <p>Ta historia zaczęła się dużo wcześniej, zanim powstały domy. Około 30 lat temu nasi rodzice trafili do Wysowej-Zdroju, szukając miejsca na spokojny odpoczynek. Wystarczyło kilka wizyt, żeby zakochać się w tej okolicy — w ciszy, przestrzeni i beskidzkim krajobrazie.</p>
-        <p>Po latach wróciliśmy tu w trójkę — jako rodzeństwo — z pomysłem, żeby stworzyć coś własnego. Projekt powstał w naszej rodzinie — jeden z nas jest architektem. Prosto, wygodnie i z myślą o prawdziwym odpoczynku.</p>
-        <a href="#kontakt" class="btn btn--primary">Napisz do nas</a>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ════════════════════════════════════════
+    <!-- ════════════════════════════════════════
        CENNIK
   ════════════════════════════════════════ -->
-  <section class="pricing" id="cennik">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Cennik</span>
-        <h2>Przejrzyste ceny</h2>
-        <p>Cena dotyczy wynajmu całego domku za dobę. Minimalny pobyt: 2 noce.</p>
+    <section class="pricing" id="cennik">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Cennik</span>
+          <h2>Przejrzyste ceny</h2>
+          <p>
+            Cena dotyczy wynajmu całego domku za dobę. Minimalny pobyt: 2 noce.
+          </p>
+        </div>
+
+        <div class="pricing__cards">
+          <div class="pricing-card animate">
+            <div class="pricing-card__period">Poza sezonem</div>
+            <div class="pricing-card__sub">
+              Styczeń–Maj<br />Październik–Grudzień
+            </div>
+            <div class="pricing-card__price">
+              <span class="pricing-card__amount">500</span>
+              zł<span class="pricing-card__per">&thinsp;/&thinsp;noc</span>
+            </div>
+            <a href="#kontakt" class="btn btn--outline btn--full">Zarezerwuj</a>
+          </div>
+
+          <div
+            class="pricing-card pricing-card--featured animate animate--delay-1"
+          >
+            <span class="pricing-card__badge badge badge--terracotta"
+              >Sezon</span
+            >
+            <div class="pricing-card__period">Sezon letni</div>
+            <div class="pricing-card__sub">1 Czerwca –<br />30 Września</div>
+            <div class="pricing-card__price">
+              <span class="pricing-card__amount">700</span>
+              zł<span class="pricing-card__per">&thinsp;/&thinsp;noc</span>
+            </div>
+            <a href="#kontakt" class="btn btn--accent btn--full">Zarezerwuj</a>
+          </div>
+
+          <div class="pricing-card animate animate--delay-2">
+            <div class="pricing-card__period">Święta i specjalne</div>
+            <div class="pricing-card__sub">
+              Boże Narodzenie, Wielkanoc,<br />Sylwester, długie weekendy
+            </div>
+            <div class="pricing-card__price">
+              <span class="pricing-card__amount">900</span>
+              zł<span class="pricing-card__per">&thinsp;/&thinsp;noc</span>
+            </div>
+            <a href="#kontakt" class="btn btn--outline btn--full">Zarezerwuj</a>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="pricing__cards">
-
-        <div class="pricing-card animate">
-          <div class="pricing-card__period">Poza sezonem</div>
-          <div class="pricing-card__sub">Styczeń–Maj<br>Październik–Grudzień</div>
-          <div class="pricing-card__price">
-            <span class="pricing-card__amount">500</span>
-            zł<span class="pricing-card__per">&thinsp;/&thinsp;noc</span>
-          </div>
-          <a href="#kontakt" class="btn btn--outline btn--full">Zarezerwuj</a>
-        </div>
-
-        <div class="pricing-card pricing-card--featured animate animate--delay-1">
-          <span class="pricing-card__badge badge badge--terracotta">Sezon</span>
-          <div class="pricing-card__period">Sezon letni</div>
-          <div class="pricing-card__sub">1 Czerwca –<br>30 Września</div>
-          <div class="pricing-card__price">
-            <span class="pricing-card__amount">700</span>
-            zł<span class="pricing-card__per">&thinsp;/&thinsp;noc</span>
-          </div>
-          <a href="#kontakt" class="btn btn--accent btn--full">Zarezerwuj</a>
-        </div>
-
-        <div class="pricing-card animate animate--delay-2">
-          <div class="pricing-card__period">Święta i specjalne</div>
-          <div class="pricing-card__sub">Boże Narodzenie, Wielkanoc,<br>Sylwester, długie weekendy</div>
-          <div class="pricing-card__price">
-            <span class="pricing-card__amount">900</span>
-            zł<span class="pricing-card__per">&thinsp;/&thinsp;noc</span>
-          </div>
-          <a href="#kontakt" class="btn btn--outline btn--full">Zarezerwuj</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ════════════════════════════════════════
+    <!-- ════════════════════════════════════════
        DODATKOWE DOŚWIADCZENIA
   ════════════════════════════════════════ -->
-  <section style="padding-block: var(--sp-24); background: var(--c-beige-100);">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Extras</span>
-        <h2>Dodaj do pobytu</h2>
-        <p>Małe rytuały, które zamieniają pobyt w coś niezapomnianego.</p>
-      </div>
-      <div class="extras__grid">
-        <div class="extra-card animate">
-          <div class="extra-card__icon">🧺</div>
-          <h3>Kosz śniadaniowy</h3>
-          <p>Śniadanie z dostawą prosto do domku. Świeże pieczywo, lokalne produkty i coś słodkiego — celebrowane powoli, na tarasie z kawą.</p>
-          <span class="extra-card__price">+ 50 zł</span>
+    <section
+      style="padding-block: var(--sp-24); background: var(--c-beige-100)"
+    >
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Extras</span>
+          <h2>Dodaj do pobytu</h2>
+          <p>Małe rytuały, które zamieniają pobyt w coś niezapomnianego.</p>
         </div>
-        <div class="extra-card animate animate--delay-2">
-          <div class="extra-card__icon">🛁</div>
-          <h3>Ruska balia</h3>
-          <p>Ciepła woda opalana drewnem, chłodne beskidzkie powietrze. Wieczorny rytuał pod nocnym niebem — bez pośpiechu, bez planu.</p>
-          <span class="extra-card__price">+ 200 zł</span>
+        <div class="extras__grid">
+          <div class="extra-card animate">
+            <div class="extra-card__icon">🧺</div>
+            <h3>Kosz śniadaniowy</h3>
+            <p>
+              Śniadanie z dostawą prosto do domku. Świeże pieczywo, lokalne
+              produkty i coś słodkiego — celebrowane powoli, na tarasie z kawą.
+            </p>
+            <span class="extra-card__price">+ 50 zł</span>
+          </div>
+          <div class="extra-card animate animate--delay-2">
+            <div class="extra-card__icon">🛁</div>
+            <h3>Ruska balia</h3>
+            <p>
+              Ciepła woda opalana drewnem, chłodne beskidzkie powietrze.
+              Wieczorny rytuał pod nocnym niebem — bez pośpiechu, bez planu.
+            </p>
+            <span class="extra-card__price">+ 200 zł</span>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-
-  <!-- ════════════════════════════════════════
+    <!-- ════════════════════════════════════════
        CTA BANNER
   ════════════════════════════════════════ -->
-  <section class="cta-banner">
-    <div class="container">
-      <h2>Gotowy na beskidzki reset?</h2>
-      <p>Napisz do nas i zarezerwuj swój termin — odpiszemy w kilka godzin.</p>
-      <a href="#kontakt" class="btn btn--white btn--lg">Sprawdź dostępność</a>
-    </div>
-  </section>
+    <section class="cta-banner">
+      <div class="container">
+        <h2>Gotowy na beskidzki reset?</h2>
+        <p>
+          Napisz do nas i zarezerwuj swój termin — odpiszemy w kilka godzin.
+        </p>
+        <a href="#kontakt" class="btn btn--white btn--lg">Sprawdź dostępność</a>
+      </div>
+    </section>
 
-
-  <!-- ════════════════════════════════════════
+    <!-- ════════════════════════════════════════
        KONTAKT
   ════════════════════════════════════════ -->
-  <section class="contact" id="kontakt">
-    <div class="container contact__inner">
-
-      <div class="contact__info animate">
-        <span class="section-label">Kontakt</span>
-        <h2>Masz pytania?<br>Napisz do nas.</h2>
-        <div class="contact__details">
-          <div class="contact__detail">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-              <circle cx="12" cy="10" r="3"/>
-            </svg>
-            <span>Wysowa-Zdrój, Beskid Niski, woj. małopolskie</span>
-          </div>
-          <div class="contact__detail">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
-            <a href="mailto:kontakt@domkichyze.pl">kontakt@domkichyze.pl</a>
-          </div>
-          <div class="contact__detail">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.27 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
-            <a href="tel:+48696166002">+48 696 166 002</a>
-          </div>
-          <div class="contact__detail">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-            </svg>
-            <a href="https://www.instagram.com/chyze_3/" target="_blank" rel="noopener noreferrer">@chyze_3</a>
+    <section class="contact" id="kontakt">
+      <div class="container contact__inner">
+        <div class="contact__info animate">
+          <span class="section-label">Kontakt</span>
+          <h2>Masz pytania?<br />Napisz do nas.</h2>
+          <div class="contact__details">
+            <div class="contact__detail">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                width="20"
+                height="20"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>Wysowa-Zdrój, Beskid Niski, woj. małopolskie</span>
+            </div>
+            <div class="contact__detail">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <a href="mailto:kontakt@domkichyze.pl">kontakt@domkichyze.pl</a>
+            </div>
+            <div class="contact__detail">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.27 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                />
+              </svg>
+              <a href="tel:+48696166002">+48 696 166 002</a>
+            </div>
+            <div class="contact__detail">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                width="20"
+                height="20"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+              <a
+                href="https://www.instagram.com/chyze_3/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >@chyze_3</a
+              >
+            </div>
           </div>
         </div>
+
+        <form
+          class="contact__form animate animate--delay-2"
+          id="contactForm"
+          novalidate
+        >
+          <div class="form-group">
+            <label for="name">Imię i nazwisko</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Jan Kowalski"
+              required
+              autocomplete="name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="jan@example.com"
+              required
+              autocomplete="email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefon (opcjonalnie)</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+48 000 000 000"
+              autocomplete="tel"
+            />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="checkin">Przyjazd</label>
+              <input type="date" id="checkin" name="checkin" />
+            </div>
+            <div class="form-group">
+              <label for="checkout">Wyjazd</label>
+              <input type="date" id="checkout" name="checkout" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="guests">Liczba osób</label>
+            <input
+              type="number"
+              id="guests"
+              name="guests"
+              placeholder="np. 4"
+              min="1"
+              max="18"
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Wiadomość</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Napisz do nas — ile osób, z psem? Czy interesuje Cię balia lub kosz śniadaniowy?"
+            ></textarea>
+          </div>
+          <div class="form-group form-group--checkbox">
+            <input type="checkbox" id="rodo" name="rodo" required />
+            <label for="rodo">
+              Wyrażam zgodę na przetwarzanie moich danych osobowych przez
+              administratora danych Chyże 3 (Filip Kieras,
+              kontakt@domkichyze.pl) w celu obsługi zapytania, zgodnie z
+              <a href="#">polityką prywatności</a>.
+            </label>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full btn--lg">
+            Wyślij wiadomość
+          </button>
+          <p
+            id="formFeedback"
+            style="
+              display: none;
+              text-align: center;
+              font-size: var(--text-sm);
+              color: var(--c-sage);
+              padding-top: var(--sp-2);
+            "
+          ></p>
+        </form>
       </div>
+    </section>
 
-      <form class="contact__form animate animate--delay-2" id="contactForm" novalidate>
-        <div class="form-group">
-          <label for="name">Imię i nazwisko</label>
-          <input type="text" id="name" name="name" placeholder="Jan Kowalski" required autocomplete="name">
-        </div>
-        <div class="form-group">
-          <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" placeholder="jan@example.com" required autocomplete="email">
-        </div>
-        <div class="form-group">
-          <label for="phone">Telefon (opcjonalnie)</label>
-          <input type="tel" id="phone" name="phone" placeholder="+48 000 000 000" autocomplete="tel">
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="checkin">Przyjazd</label>
-            <input type="date" id="checkin" name="checkin">
-          </div>
-          <div class="form-group">
-            <label for="checkout">Wyjazd</label>
-            <input type="date" id="checkout" name="checkout">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="guests">Liczba osób</label>
-          <input type="number" id="guests" name="guests" placeholder="np. 4" min="1" max="18">
-        </div>
-        <div class="form-group">
-          <label for="message">Wiadomość</label>
-          <textarea id="message" name="message" rows="4" placeholder="Napisz do nas — ile osób, z psem? Czy interesuje Cię balia lub kosz śniadaniowy?"></textarea>
-        </div>
-        <div class="form-group form-group--checkbox">
-          <input type="checkbox" id="rodo" name="rodo" required>
-          <label for="rodo">
-            Wyrażam zgodę na przetwarzanie moich danych osobowych przez administratora danych Chyże 3 (Filip Kieras, kontakt@domkichyze.pl) w celu obsługi zapytania, zgodnie z <a href="#">polityką prywatności</a>.
-          </label>
-        </div>
-        <button type="submit" class="btn btn--primary btn--full btn--lg">Wyślij wiadomość</button>
-        <p id="formFeedback" style="display:none; text-align:center; font-size:var(--text-sm); color:var(--c-sage); padding-top:var(--sp-2);"></p>
-      </form>
-
-    </div>
-  </section>
-
-
-  <!-- ════════════════════════════════════════
+    <!-- ════════════════════════════════════════
        FOOTER
   ════════════════════════════════════════ -->
-  <footer class="footer">
-    <div class="container footer__inner">
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <img
+            src="logo.png"
+            alt="Chyże 3"
+            class="footer__logo"
+            onerror="this.style.display = 'none'"
+          />
+          <p>Trzy niezależne domki w sercu Beskidu Niskiego. Wysowa-Zdrój.</p>
+          <a
+            href="https://www.instagram.com/chyze_3/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer__instagram"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              width="18"
+              height="18"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+            @chyze_3
+          </a>
+        </div>
 
-      <div class="footer__brand">
-        <img src="logo.png" alt="Chyże 3" class="footer__logo" onerror="this.style.display='none'">
-        <p>Trzy niezależne domki w sercu Beskidu Niskiego. Wysowa-Zdrój.</p>
-        <a href="https://www.instagram.com/chyze_3/" target="_blank" rel="noopener noreferrer" class="footer__instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-          </svg>
-          @chyze_3
-        </a>
+        <nav class="footer__nav" aria-label="Nawigacja w stopce">
+          <a href="#domki">Nasze domki</a>
+          <a href="#atrakcje">Atrakcje</a>
+          <a href="#cennik">Cennik</a>
+          <a href="#o-nas">O nas</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+
+        <div class="footer__contact">
+          <a href="mailto:kontakt@domkichyze.pl">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              width="16"
+              height="16"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            kontakt@domkichyze.pl
+          </a>
+          <a href="tel:+48696166002">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              width="16"
+              height="16"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.27 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.18.96.5 1.9.85 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+              />
+            </svg>
+            +48 696 166 002
+          </a>
+          <a
+            href="https://www.domkichyze.pl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              width="16"
+              height="16"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path
+                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+              />
+            </svg>
+            www.domkichyze.pl
+          </a>
+        </div>
       </div>
 
-      <nav class="footer__nav" aria-label="Nawigacja w stopce">
-        <a href="#domki">Nasze domki</a>
-        <a href="#atrakcje">Atrakcje</a>
-        <a href="#cennik">Cennik</a>
-        <a href="#o-nas">O nas</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
-
-      <div class="footer__contact">
-        <a href="mailto:kontakt@domkichyze.pl">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-            <polyline points="22,6 12,13 2,6"/>
-          </svg>
-          kontakt@domkichyze.pl
-        </a>
-        <a href="tel:+48696166002">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.27 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.18.96.5 1.9.85 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-          </svg>
-          +48 696 166 002
-        </a>
-        <a href="https://www.domkichyze.pl" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="2" y1="12" x2="22" y2="12"/>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-          </svg>
-          www.domkichyze.pl
-        </a>
+      <div class="footer__bottom">
+        <p>© 2026 Chyże 3 · <a href="#">Polityka prywatności</a></p>
+        <p>Wysowa-Zdrój, Beskid Niski</p>
       </div>
+    </footer>
 
-    </div>
-
-    <div class="footer__bottom">
-      <p>© 2025 Chyże 3 · <a href="#">Polityka prywatności</a></p>
-      <p>Wysowa-Zdrój, Beskid Niski</p>
-    </div>
-  </footer>
-
-
-  <!-- ════════════════════════════════════════
+    <!-- ════════════════════════════════════════
        JAVASCRIPT
   ════════════════════════════════════════ -->
-  <script>
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => nav.classList.toggle('nav--scrolled', window.scrollY > 60), { passive: true });
+    <script>
+      const nav = document.getElementById("nav");
+      window.addEventListener(
+        "scroll",
+        () => nav.classList.toggle("nav--scrolled", window.scrollY > 60),
+        { passive: true },
+      );
 
-    document.querySelector('.hero').classList.add('loaded');
+      document.querySelector(".hero").classList.add("loaded");
 
-    const hamburger = document.getElementById('hamburger');
-    const navLinks  = document.getElementById('navLinks');
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
 
-    hamburger.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('nav__links--open');
-      hamburger.classList.toggle('nav__hamburger--open', isOpen);
-      hamburger.setAttribute('aria-expanded', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
-    });
-
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('nav__links--open');
-        hamburger.classList.remove('nav__hamburger--open');
-        hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
+      hamburger.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("nav__links--open");
+        hamburger.classList.toggle("nav__hamburger--open", isOpen);
+        hamburger.setAttribute("aria-expanded", isOpen);
+        document.body.style.overflow = isOpen ? "hidden" : "";
       });
-    });
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', e => {
-        const target = document.querySelector(anchor.getAttribute('href'));
-        if (!target) return;
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("nav__links--open");
+          hamburger.classList.remove("nav__hamburger--open");
+          hamburger.setAttribute("aria-expanded", "false");
+          document.body.style.overflow = "";
+        });
       });
-    });
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", (e) => {
+          const target = document.querySelector(anchor.getAttribute("href"));
+          if (!target) return;
+          e.preventDefault();
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+      );
+      document
+        .querySelectorAll(".animate")
+        .forEach((el) => observer.observe(el));
+
+      const checkin = document.getElementById("checkin");
+      const checkout = document.getElementById("checkout");
+      checkin.setAttribute("min", new Date().toISOString().split("T")[0]);
+      checkin.addEventListener("change", () => {
+        const d = new Date(checkin.value);
+        d.setDate(d.getDate() + 2);
+        checkout.setAttribute("min", d.toISOString().split("T")[0]);
+        if (checkout.value && checkout.value < d.toISOString().split("T")[0]) {
+          checkout.value = d.toISOString().split("T")[0];
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
 
-    const checkin  = document.getElementById('checkin');
-    const checkout = document.getElementById('checkout');
-    checkin.setAttribute('min', new Date().toISOString().split('T')[0]);
-    checkin.addEventListener('change', () => {
-      const d = new Date(checkin.value);
-      d.setDate(d.getDate() + 2);
-      checkout.setAttribute('min', d.toISOString().split('T')[0]);
-      if (checkout.value && checkout.value < d.toISOString().split('T')[0]) {
-        checkout.value = d.toISOString().split('T')[0];
-      }
-    });
-
-    document.getElementById('contactForm').addEventListener('submit', e => {
-      e.preventDefault();
-      const feedback = document.getElementById('formFeedback');
-      const btn = e.target.querySelector('button[type="submit"]');
-      btn.disabled = true;
-      btn.textContent = 'Wysyłanie…';
-      setTimeout(() => {
-        feedback.textContent = '✓ Dziękujemy! Odezwiemy się najszybciej jak to możliwe.';
-        feedback.style.display = 'block';
-        btn.textContent = 'Wyślij wiadomość';
-        btn.disabled = false;
-        e.target.reset();
-      }, 900);
-    });
-  </script>
-
-</body>
+      document.getElementById("contactForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const feedback = document.getElementById("formFeedback");
+        const btn = e.target.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.textContent = "Wysyłanie…";
+        setTimeout(() => {
+          feedback.textContent =
+            "✓ Dziękujemy! Odezwiemy się najszybciej jak to możliwe.";
+          feedback.style.display = "block";
+          btn.textContent = "Wyślij wiadomość";
+          btn.disabled = false;
+          e.target.reset();
+        }, 900);
+      });
+    </script>
+  </body>
 </html>
