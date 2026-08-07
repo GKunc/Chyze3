@@ -1,0 +1,376 @@
+/*
+ * ═══════════════════════════════════════════════════
+ *  CHYŻE 3 — Design System
+ *  Plik do użycia jako bazowy w motywie WordPress.
+ *  Zaimportuj jako pierwszy w style.css child theme.
+ * ═══════════════════════════════════════════════════
+ *
+ *  @import url('design.css');
+ *
+ *  Lub w functions.php:
+ *  wp_enqueue_style('chyze3-design', get_stylesheet_directory_uri() . '/design.css');
+ * ═══════════════════════════════════════════════════
+ */
+
+/* ─── GOOGLE FONTS ─────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap');
+
+
+/* ─── DESIGN TOKENS ─────────────────────────────────────── */
+:root {
+
+  /* KOLORY BRANDU
+  ─────────────────────────────────────────────────────────
+  Źródło: brief klienta, dopasowane do logo
+  ─────────────────────────────────────────────────────────── */
+  --c-dark:           #2C2F29;   /* Ciemny grafit / mech     — logo, teksty    */
+  --c-dark-700:       #3D4039;   /* Grafit medium             — nagłówki nav    */
+  --c-dark-500:       #5A5E56;   /* Grafit jasny              — tekst drugorzędny */
+  --c-dark-200:       #A8ACA4;   /* Grafit bardzo jasny       — placeholdery    */
+
+  --c-beige:          #F4F1EA;   /* Jasny beż / surowy len    — tło główne      */
+  --c-beige-200:      #EDE9DF;   /* Ciemniejszy beż           — tło kart        */
+  --c-beige-100:      #FAFAF7;   /* Prawie biały              — tło sekcji      */
+
+  --c-terracotta:     #C48B61;   /* Terakota / ciepłe drewno  — akcenty, ceny   */
+  --c-terracotta-light: #D4A07E; /* Jaśniejsza terakota       — hover           */
+  --c-terracotta-dark:  #A5703E; /* Ciemniejsza terakota      — aktywne stany   */
+
+  --c-sage:           #8A9A86;   /* Zgaszona szałwia / las    — CTA, przyciski  */
+  --c-sage-light:     #A8B5A4;   /* Jasna szałwia             — hover           */
+  --c-sage-dark:      #6B7A67;   /* Ciemna szałwia            — aktywne stany   */
+
+  --c-white:          #FAFAF8;   /* Biały (ciepły odcień)                       */
+  --c-black:          #1A1C18;   /* Prawie czarny             — najciemniejsze  */
+
+  /* OVERLAY */
+  --c-overlay-light:  rgba(44, 47, 41, 0.40);
+  --c-overlay-medium: rgba(44, 47, 41, 0.60);
+  --c-overlay-dark:   rgba(44, 47, 41, 0.80);
+
+
+  /* TYPOGRAFIA
+  ─────────────────────────────────────────────────────────── */
+  --font-heading: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-body:    'Outfit', 'Lato', system-ui, -apple-system, sans-serif;
+
+  /* Skala typografii (fluid clamp zalecany w CSS) */
+  --text-2xs:  0.6875rem;   /* 11px */
+  --text-xs:   0.75rem;     /* 12px */
+  --text-sm:   0.875rem;    /* 14px */
+  --text-base: 1rem;        /* 16px */
+  --text-lg:   1.125rem;    /* 18px */
+  --text-xl:   1.25rem;     /* 20px */
+  --text-2xl:  1.5rem;      /* 24px */
+  --text-3xl:  2rem;        /* 32px */
+  --text-4xl:  2.5rem;      /* 40px */
+  --text-5xl:  3.5rem;      /* 56px */
+  --text-6xl:  4.5rem;      /* 72px */
+  --text-7xl:  6rem;        /* 96px */
+
+  /* Line-height */
+  --leading-none:    1;
+  --leading-tight:   1.15;
+  --leading-snug:    1.35;
+  --leading-normal:  1.6;
+  --leading-relaxed: 1.75;
+
+  /* Letter-spacing */
+  --tracking-tighter: -0.04em;
+  --tracking-tight:   -0.02em;
+  --tracking-normal:   0;
+  --tracking-wide:     0.06em;
+  --tracking-wider:    0.12em;
+  --tracking-widest:   0.18em;
+
+  /* Font weights */
+  --weight-light:   300;
+  --weight-regular: 400;
+  --weight-medium:  500;
+  --weight-semi:    600;
+
+
+  /* SPACING (skala 4px)
+  ─────────────────────────────────────────────────────────── */
+  --sp-0:  0;
+  --sp-1:  0.25rem;    /*  4px */
+  --sp-2:  0.5rem;     /*  8px */
+  --sp-3:  0.75rem;    /* 12px */
+  --sp-4:  1rem;       /* 16px */
+  --sp-5:  1.25rem;    /* 20px */
+  --sp-6:  1.5rem;     /* 24px */
+  --sp-8:  2rem;       /* 32px */
+  --sp-10: 2.5rem;     /* 40px */
+  --sp-12: 3rem;       /* 48px */
+  --sp-16: 4rem;       /* 64px */
+  --sp-20: 5rem;       /* 80px */
+  --sp-24: 6rem;       /* 96px */
+  --sp-32: 8rem;       /* 128px */
+  --sp-40: 10rem;      /* 160px */
+
+
+  /* BORDER RADIUS
+  ─────────────────────────────────────────────────────────── */
+  --r-xs:   2px;
+  --r-sm:   4px;
+  --r-md:   8px;
+  --r-lg:   16px;
+  --r-xl:   24px;
+  --r-2xl:  32px;
+  --r-full: 9999px;
+
+
+  /* SHADOWS
+  ─────────────────────────────────────────────────────────── */
+  --shadow-xs:  0 1px 2px  rgba(44, 47, 41, 0.06);
+  --shadow-sm:  0 2px 6px  rgba(44, 47, 41, 0.08);
+  --shadow-md:  0 4px 16px rgba(44, 47, 41, 0.10);
+  --shadow-lg:  0 8px 32px rgba(44, 47, 41, 0.14);
+  --shadow-xl:  0 16px 48px rgba(44, 47, 41, 0.18);
+
+
+  /* TRANSITIONS
+  ─────────────────────────────────────────────────────────── */
+  --ease-out:    cubic-bezier(0.0, 0.0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0.0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --duration-instant: 80ms;
+  --duration-fast:    150ms;
+  --duration-normal:  280ms;
+  --duration-slow:    450ms;
+  --duration-slower:  700ms;
+
+
+  /* LAYOUT
+  ─────────────────────────────────────────────────────────── */
+  --container-max:     1200px;
+  --container-narrow:  800px;
+  --container-wide:    1400px;
+  --container-padding: var(--sp-6);
+  --nav-height:        76px;
+  --section-padding:   var(--sp-32);
+
+}
+
+
+/* ─── UTILITY CLASSES ────────────────────────────────────── */
+/* Wszystkie klasy poniżej są gotowe do użycia w WordPress   */
+
+.container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.container--narrow { max-width: var(--container-narrow); }
+.container--wide   { max-width: var(--container-wide);   }
+
+
+/* Etykieta sekcji (np. "Nasza historia", "Cennik") */
+.section-label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--text-2xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--c-terracotta);
+  margin-bottom: var(--sp-3);
+}
+
+/* Nagłówek sekcji (wyśrodkowany blok) */
+.section-header {
+  text-align: center;
+  max-width: 640px;
+  margin-inline: auto;
+  margin-bottom: var(--sp-16);
+}
+
+.section-header h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+  font-weight: var(--weight-light);
+  letter-spacing: var(--tracking-tight);
+  color: var(--c-dark);
+  line-height: var(--leading-tight);
+  margin-bottom: var(--sp-4);
+}
+
+.section-header p {
+  font-size: var(--text-lg);
+  color: var(--c-dark-500);
+  line-height: var(--leading-relaxed);
+}
+
+
+/* ─── SYSTEM PRZYCISKÓW ──────────────────────────────────── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  padding: 0.75rem 2rem;
+  border-radius: var(--r-full);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background-color var(--duration-normal) var(--ease-out),
+    color           var(--duration-normal) var(--ease-out),
+    border-color    var(--duration-normal) var(--ease-out),
+    transform       var(--duration-fast)   var(--ease-out),
+    box-shadow      var(--duration-normal) var(--ease-out);
+}
+
+.btn:hover  { transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.btn:active { transform: translateY(0);    box-shadow: none; }
+
+/* Główny (sage green) */
+.btn--primary {
+  background: var(--c-sage);
+  color: var(--c-white);
+  border-color: var(--c-sage);
+}
+.btn--primary:hover {
+  background: var(--c-sage-dark);
+  border-color: var(--c-sage-dark);
+}
+
+/* Kontur na jasnym tle */
+.btn--outline {
+  background: transparent;
+  color: var(--c-dark);
+  border-color: var(--c-dark);
+}
+.btn--outline:hover {
+  background: var(--c-dark);
+  color: var(--c-white);
+}
+
+/* Duch (na ciemnym/zdjęciowym tle) */
+.btn--ghost {
+  background: rgba(250, 250, 248, 0.1);
+  color: var(--c-white);
+  border-color: rgba(250, 250, 248, 0.45);
+  backdrop-filter: blur(4px);
+}
+.btn--ghost:hover {
+  background: rgba(250, 250, 248, 0.2);
+  border-color: var(--c-white);
+}
+
+/* Biały (na kolorowym tle) */
+.btn--white {
+  background: var(--c-white);
+  color: var(--c-dark);
+  border-color: var(--c-white);
+}
+.btn--white:hover {
+  background: var(--c-beige);
+  border-color: var(--c-beige);
+}
+
+/* Terakota */
+.btn--accent {
+  background: var(--c-terracotta);
+  color: var(--c-white);
+  border-color: var(--c-terracotta);
+}
+.btn--accent:hover {
+  background: var(--c-terracotta-dark);
+  border-color: var(--c-terracotta-dark);
+}
+
+.btn--full { width: 100%; }
+.btn--sm   { padding: 0.5rem 1.25rem; font-size: var(--text-2xs); }
+.btn--lg   { padding: 1rem 2.5rem;    font-size: var(--text-sm);  }
+
+
+/* ─── BADGE / CHIP ────────────────────────────────────────── */
+.badge {
+  display: inline-block;
+  padding: var(--sp-1) var(--sp-3);
+  border-radius: var(--r-full);
+  font-family: var(--font-body);
+  font-size: var(--text-2xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+}
+
+.badge--terracotta { background: var(--c-terracotta); color: var(--c-white); }
+.badge--sage       { background: var(--c-sage);       color: var(--c-white); }
+.badge--dark       { background: var(--c-dark);       color: var(--c-white); }
+.badge--beige      { background: var(--c-beige);      color: var(--c-dark);  }
+
+
+/* ─── TYPOGRAFIA GLOBALNA ─────────────────────────────────── */
+.h1, .h2, .h3, .h4 {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-light);
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+  color: var(--c-dark);
+}
+
+.h1 { font-size: clamp(var(--text-4xl), 7vw, var(--text-7xl)); }
+.h2 { font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl)); }
+.h3 { font-size: clamp(var(--text-2xl), 3vw, var(--text-4xl)); }
+.h4 { font-size: var(--text-2xl); }
+
+.body-lg { font-size: var(--text-lg); line-height: var(--leading-relaxed); }
+.body-sm { font-size: var(--text-sm); line-height: var(--leading-relaxed); }
+
+.text-muted   { color: var(--c-dark-500); }
+.text-accent  { color: var(--c-terracotta); }
+.text-sage    { color: var(--c-sage); }
+.text-center  { text-align: center; }
+.text-light   { color: var(--c-white); }
+
+
+/* ─── KARTY (reusable) ───────────────────────────────────── */
+.card {
+  background: var(--c-white);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--duration-normal) var(--ease-out),
+              box-shadow var(--duration-normal) var(--ease-out);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card__body { padding: var(--sp-6); }
+
+
+/* ─── ANIMACJE WEJŚCIA ───────────────────────────────────── */
+/* Dodaj klasę .animate do elementu, JS doda .visible */
+.animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity   var(--duration-slow)   var(--ease-out),
+    transform var(--duration-slow)   var(--ease-out);
+}
+
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate--delay-1 { transition-delay: 100ms; }
+.animate--delay-2 { transition-delay: 200ms; }
+.animate--delay-3 { transition-delay: 300ms; }
+.animate--delay-4 { transition-delay: 400ms; }
+.animate--delay-5 { transition-delay: 500ms; }
